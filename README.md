@@ -152,7 +152,7 @@ Este aplicativo foi desenvolvido durante o **VIII Campeonato Code Race**, promov
 
 - **[Djonathan Briesch](https://github.com/Djonathan-Briesch)** - Desenvolvedor Mobile
 - **[Mauricio Carvalho Cogo](https://github.com/MauricioCogo)** - Backend Developer
-- **[Isaboo Acosta Alcântara]** - Designer UI/UX
+- **Isaboo Acosta Alcântara** - Designer UI/UX
 - **[Rafael Müller Tischler](https://github.com/rafaelTischler)** - Gerente de Projeto
 - **Pedro Bertoldo** - Suporte
 
