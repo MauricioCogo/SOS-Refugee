@@ -77,6 +77,46 @@ Um aplicativo para ajudar comunidades em risco devido a catástrofes naturais, f
      $password = '';
      ```
 
+## API Externa
+
+### OpenWeatherMap
+
+Utilizamos a API da OpenWeatherMap para obter dados climáticos em tempo real e prever possíveis riscos.
+
+#### URL Base:
+```text
+https://api.openweathermap.org/data/2.5/weather
+```
+
+#### Parâmetros Utilizados:
+- `lat` (latitude): Coordenada geográfica de latitude.
+- `lon` (longitude): Coordenada geográfica de longitude.
+- `appid` (API Key): Sua chave de API para autenticação.
+
+#### Exemplo de Requisição:
+```php
+$url = "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$apiKey";
+```
+
+#### Exemplo de Retorno Esperado:
+```json
+{
+  "status": "SUCCESS",
+  "temp": {
+    "Temperatura": 23.45
+  },
+  "descricao": {
+    "Descrição": "Clear Sky"
+  },
+  "alert": {
+    "Alerta": "Sem alerta"
+  }
+}
+```
+
+### Observação:
+- Certifique-se de configurar a variável `$apiKey` no backend PHP com a sua chave obtida no site [OpenWeatherMap](https://openweathermap.org/api).
+
 ## Funcionalidades Principais
 
 1. **Botão SOS:**
@@ -103,6 +143,18 @@ Um aplicativo para ajudar comunidades em risco devido a catástrofes naturais, f
    git push origin minha-branch
    ```
 4. Abra um Pull Request no repositório principal.
+
+## Créditos
+
+Este aplicativo foi desenvolvido durante o **VIII Campeonato Code Race**, promovido pelo curso de Bacharelado em Sistemas de Informação da Antonio Meneghetti Faculdade, ocorrido nos dias 30 e 31 de agosto de 2024.
+
+### Equipe Bug Busters
+
+- **[Djonathan Briesch](https://github.com/Djonathan-Briesch)** - Desenvolvedor Mobile
+- **[Mauricio Carvalho Cogo](https://github.com/MauricioCogo)** - Backend Developer
+- **[Isaboo Acosta Alcântara]** - Designer UI/UX
+- **[Rafael Müller Tischler](https://github.com/rafaelTischler)** - Gerente de Projeto
+- **Pedro Bertoldo** - Suporte
 
 ## Licença
 
