@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# S.O.S Refugee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um aplicativo para ajudar comunidades em risco devido a catástrofes naturais, fornecendo monitoramento climático e mapeamento de zonas seguras.
 
-## Available Scripts
+## Requisitos
 
-In the project directory, you can run:
+### Ferramentas Necessárias
 
-### `npm start`
+- **React Native**: Para rodar o aplicativo mobile.
+- **Node.js** (v14 ou superior): Para gerenciar pacotes e rodar o servidor do React Native.
+- **XAMPP**: Para o servidor PHP.
+- **Git**: Para gerenciar o repositório.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Dependências do Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React Native CLI ou Expo CLI (dependendo da configuração do projeto).
+- PHP 7.4 ou superior.
 
-### `npm test`
+## Passo a Passo de Configuração
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Aplicativo Mobile
 
-### `npm run build`
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/username/sos-refugee.git
+   cd sos-refugee
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Instale as dependências do React Native:**
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Execute o aplicativo:**
+   - Para usuários do React Native CLI:
+     ```bash
+     npx react-native run-android
+     ```
+   - Para usuários do Expo CLI:
+     ```bash
+     npx expo start
+     ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Configuração do backend:** Certifique-se de que o aplicativo esteja configurado para consumir a API PHP no XAMPP. Atualize a URL base no código, se necessário.
 
-### `npm run eject`
+### Configuração do Backend (PHP)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Copie a pasta `PHP` para o XAMPP:**
+   - Localize a pasta `PHP` no repositório.
+   - Cole-a no diretório `htdocs` do XAMPP. O caminho padrão é algo como:
+     ```
+     C:\xampp\htdocs\PHP
+     ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Inicie o XAMPP:**
+   - Certifique-se de que o Apache e o MySQL estão rodando.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Teste a API PHP:**
+   - Abra o navegador e vá para:
+     ```
+     http://localhost/PHP
+     ```
+   - Certifique-se de que os endpoints estão funcionando corretamente.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Banco de Dados
 
-## Learn More
+1. **Importe o banco de dados:**
+   - No phpMyAdmin, importe o arquivo `database.sql` (presente na pasta `PHP`).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Configure o arquivo de conexão:**
+   - Abra o arquivo `config.php` (na pasta `PHP`).
+   - Certifique-se de que as credenciais do banco estão corretas:
+     ```php
+     $host = 'localhost';
+     $db = 'sos_refugee';
+     $user = 'root';
+     $password = '';
+     ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Funcionalidades Principais
 
-### Code Splitting
+1. **Botão SOS:**
+   - Aciona um mapa com as zonas seguras na região.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Cadastro de usuário:**
+   - Registre-se para acessar funcionalidades exclusivas.
 
-### Analyzing the Bundle Size
+3. **Cadastro de Zonas Seguras:**
+   - Permita que usuários adicionem locais seguros ao mapa.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. **Perfil de Usuário:**
+   - Visualize e edite informações pessoais.
 
-### Making a Progressive Web App
+## Contribuição
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Faça um fork do projeto.
+2. Crie uma branch para suas alterações:
+   ```bash
+   git checkout -b minha-branch
+   ```
+3. Envie suas alterações:
+   ```bash
+   git push origin minha-branch
+   ```
+4. Abra um Pull Request no repositório principal.
 
-### Advanced Configuration
+## Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Este projeto é distribuído sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Equipe Bug Busters**
